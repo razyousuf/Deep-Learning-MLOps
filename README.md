@@ -1,15 +1,23 @@
-# Deep-Learning-MLOps
+# ✅ Deep-Learning-MLOps
 
-## Workflow
+## 🔢 Steps
 
-1. Update the config.yaml # changeble vars and urls
-2. Update the params.yaml & read it
-3. Update the entity & read it
-4. Update the configuration manager in src config
-5. Update the components
-6. Update the pipeline
-7. Update the main.py # Create Enpoints
-8. Update the dvc.yaml
+1. Data Ingestion   # Download, extract, and prepare raw data
+2. Create the base model   # Download the VGG16 with Conv. layers only, add the customized dense layers to it, and save both models
+3. Train and the base model   # Train the model on processed data
+4. Evaluate the base model with MLflow  # Log metrics, params, and model using MLflow
+5. Create the prediction pipeline   # Build serving logic for inference (e.g., API/UI integration)
+
+## Workflow for each step
+
+1. Update the config.yaml. # changeble vars and urls
+2. Update the params.yaml & read it. # Specify hyperparameters and tunable settings
+3. Update the entity & read it. # Create dataclasses to structure config _return-type_ of functions
+4. Update the configuration manager in src config. # Parse YAMLs, instantiate entity configs
+5. Update the components. # Write the logic for this step (e.g., download, train, evaluate)
+6. Update the pipeline. # Sequence component calls using the pipeline class
+7. Update the main.py. # Create entry/end point to trigger the pipeline with logging
+8. Update the dvc.yaml. # Track dependencies, outputs, and automate pipeline with DVC
 
 ## How to run?
 
